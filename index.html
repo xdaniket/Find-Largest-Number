@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  //**
+
+  // Q:  How we can find a largest number inside an array ?   //** with validation.
+
+  const arrNumber = [10, 2, -100, 4, 50, 600, 100, 1221];
+
+  const findLargerNumber = (array) => {
+    if (!Array.isArray(array)) {
+      return "Please enter a valid input";
+    }
+    let maximumNumber = array[0];
+    for (let i = 0; i < array.length; i++) {
+      if (array[i] >= maximumNumber) {
+        maximumNumber = array[i];
+      }
+    }
+    return maximumNumber;
+  };
+  console.log(findLargerNumber(arrNumber));
+</script>
